@@ -4,11 +4,8 @@ import re
 import string
 import spacy
 
-# Load the spaCy model
-# Provide the absolute path to the 'en_core_web_sm' model data directory
-model_path = "en_core_web_sm"
-
-nlp = spacy.load(model_path)
+# Load the spaCy model by name
+nlp = spacy.load("en_core_web_sm/en_core_web_sm-3.6.0")
 
 # Load the trained XGBoost model and label encoder
 model = joblib.load('xgboost_model.pkl')
